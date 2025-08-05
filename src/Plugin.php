@@ -28,7 +28,6 @@ defined( 'ABSPATH' ) || exit;
  * - Plugin initialization and textdomain loading
  * - Custom post type registration
  * - Hook and filter registration
- * - Module coordination (FAR-614 through FAR-617)
  *
  * @since 1.0.0
  * @version 1.0.0
