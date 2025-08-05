@@ -1,6 +1,12 @@
 {
   "name": "vendor-name/plugin-name",
   "description": "Boilerplate for WordPress plugin development using TDD principles",
+  "authors": [
+    {
+      "name": "Javier Sierra",
+      "email": "agradecido@manerasdevivir.com"
+    }
+  ],
   "type": "wordpress-plugin",
   "autoload": {
     "psr-4": {

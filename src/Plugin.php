@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
  * Main plugin class for WP Plugin TDD Boilerplate.
  *
  * Handles plugin initialization, hook registration, and core functionality coordination.
- * Follows the singleton pattern for plugin initialization and serves as the main
+ * Uses static methods for plugin initialization and serves as the main
  * entry point for all plugin features.
  *
  * Features managed:
@@ -34,14 +34,6 @@ defined( 'ABSPATH' ) || exit;
  * @version 1.0.0
  */
 final class Plugin {
-
-	/**
-	 * Plugin instance.
-	 *
-	 * @since 1.0.0
-	 * @var Plugin|null
-	 */
-	private static ?Plugin $instance = null;
 
 	/**
 	 * Plugin version.
