@@ -1,0 +1,30 @@
+# Composer dependencies
+/vendor/
+
+/node_modules/
+
+# Build artifacts
+*.log
+*.cache
+*.tmp
+*.zip
+.DS_Store
+
+# Testing artifacts
+/coverage-report/
+/test-results.xml
+/.phpunit.cache/
+.phpunit.result.cache
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.local
+
+# Database files
+*.sql
+
+

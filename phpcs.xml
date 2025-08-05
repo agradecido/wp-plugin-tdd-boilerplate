@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<ruleset name="WP Plugin TDD Boilerplate Plugin Rules">
+    <description>WordPress coding standards for the WP Plugin TDD Boilerplate plugin.</description>
+
+    <!-- Include WordPress coding standard -->
+    <rule ref="WordPress">
+        <!-- Allow short array syntax -->
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+        <!-- Allow short open tags in templates -->
+        <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
+        <!-- Allow modern file naming for namespaced classes -->
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+        <!-- Allow snake_case variable names (useful for WordPress compatibility) -->
+        <exclude name="WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase"/>
+        <!-- Allow error_log in debug contexts -->
+        <exclude name="WordPress.PHP.DevelopmentFunctions.error_log_error_log"/>
+    </rule>
+
+    <!-- Include WordPress Extra standards -->
+    <rule ref="WordPress-Extra"/>
+
+    <!-- Files to scan -->
+    <file>src/</file>
+
+    <!-- Exclude vendor directory -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+
+    <!-- WordPress specific configuration -->
+    <config name="minimum_supported_wp_version" value="5.0"/>
+    <config name="testVersion" value="7.4-"/>
+
+    <!-- Allow WordPress naming conventions -->
+    <rule ref="WordPress.NamingConventions.ValidFunctionName">
+        <exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/>
+    </rule>
+
+    <!-- Allow WordPress hooks naming -->
+    <rule ref="WordPress.NamingConventions.ValidHookName">
+        <properties>
+            <property name="additionalWordDelimiters" value="-"/>
+        </properties>
+    </rule>
+
+    <!-- Show progress while scanning -->
+    <arg name="report" value="summary"/>
+    <arg name="colors"/>
+    <arg value="p"/>
+
+    <!-- Set memory limit -->
+    <ini name="memory_limit" value="512M"/>
+
+</ruleset>
